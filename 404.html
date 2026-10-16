@@ -94,6 +94,10 @@
     box-sizing: border-box;
   }
   input:focus, textarea:focus, select:focus { outline: 2px solid var(--focus-ring); border-color: var(--accent-strong); }
+  /* date boxes never look "selected" when tapped */
+  input[data-date-input] { -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; cursor: pointer; }
+  input[data-date-input]:focus { outline: none !important; box-shadow: none !important; border-color: var(--border) !important; }
+  input[data-date-input]::selection { background: transparent; }
   select { font-family: inherit; }
   a, .clickable, [role="button"] { transition: color 0.15s ease, background-color 0.15s ease; }
   table { transition: opacity 0.15s ease; }
@@ -358,7 +362,7 @@
     color: HighlightText;
   }
 </style>
-<link rel="modulepreload" href="/assets/app-a6633b27147b.js">
+<link rel="modulepreload" href="/assets/app-c531b9453b7a.js">
 <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://firestore.googleapis.com" crossorigin>
 </head>
@@ -407,7 +411,7 @@
   }
 </script>
 
-<script type="module" src="/assets/app-a6633b27147b.js"></script></script>
+<script type="module" src="/assets/app-c531b9453b7a.js"></script></script>
 
 <script>
   if ("serviceWorker" in navigator) {
